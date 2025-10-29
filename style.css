@@ -16,8 +16,8 @@ body {
 /* Language Switcher */
 .language-switcher {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     z-index: 1000;
 }
 
@@ -49,13 +49,61 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 0.1em;
 }
 
-.content-card {
-    max-width: 28rem;
-    text-align: center;
+/* new split wrapper: two columns that do not overlap */
+.split {
+    display: flex;
+    align-items: flex-start; /* don't stretch columns into each other */
+    gap: 2rem;
+    width: 100%;
+    max-width: 64rem; /* overall max width */
+    padding: 1rem;
+}
+
+/* left and right column helpers
+   make them each take 50% of the split on desktop */
+.left,
+.right {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* photo placeholder: always 1:1 ratio using width (no height:100%)
+   this prevents it from overflowing into the right column */
+.photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    min-height: 150px;
+    border-radius: 1.25rem;                      /* increased corner rounding */
+    border: 2px solid #ff5a5a;                   /* thin-ish red border */
+    background-image: url('https://via.placeholder.com/800');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+    max-width: 100%;
+    display: block;
+    overflow: hidden;                            /* ensure rounded corners clip contents */
+    /* for <img> elements */
+    object-fit: cover;
+}
+
+/* mobile-only photo inside the right column (hidden on desktop) */
+.photo--mobile {
+    display: none;
+}
+
+/* ensure content-card fills its column */
+.right .content-card {
+    max-width: none;
+    width: 100%;
+    text-align: left;
     padding: 2rem;
+    align-self: stretch; /* allow card to size naturally */
 }
 
 /* Title */
@@ -78,7 +126,7 @@ body {
 .navigation {
     margin-bottom: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* changed from center -> left-align */
     gap: 1.5rem;
 }
 
@@ -127,6 +175,57 @@ body {
 
 /* Responsive Design */
 @media (max-width: 640px) {
+    .language-switcher {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .content-card {
+        padding: 1.5rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .navigation {
+        gap: 1rem;
+    }
+}
+
+/* Responsive: mobile stacks and shows mobile image under nav */
+@media (max-width: 640px) {
+    .split {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        align-items: stretch;
+    }
+
+    /* hide desktop/left photo on mobile */
+    .left .photo {
+        display: none;
+    }
+
+    /* show the photo placed after nav; make it smaller and 1:1 */
+    .photo--mobile {
+        display: block;
+        width: 56%;
+        max-width: 300px;
+        margin: 0.6rem auto;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        border-radius: 1.25rem;
+        border: 2px solid #ff5a5a;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    }
+
+    .right .content-card {
+        padding: 1rem;
+        text-align: left; /* keep title, nav and text left-aligned on mobile too */
+    }
+
+    /* existing mobile overrides */
     .language-switcher {
         top: 15px;
         right: 15px;
