@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>t x r m s c o n d i t i o n s —  links</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<style>
+		/* buttons grid and styles (no images on this page) */
+		.content-wrapper {
+			max-width: 36rem;
+			margin: 2.5rem auto;
+			padding: 1rem;
+		}
+
+		.links-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 0.75rem;
+			margin-top: 0.75rem;
+		}
+
+		.link-btn {
+			display: inline-block;
+			width: 100%;
+			padding: 0.85rem 1rem;
+			background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+			color: hsl(210,40%,98%);
+			border: 1px solid rgba(255,255,255,0.06);
+			border-radius: 0.75rem;
+			text-decoration: none;
+			text-align: center;
+			font-weight: 600;
+			transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+			box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+		}
+
+		.link-btn:hover {
+			transform: translateY(-4px);
+			border-color: #ff5a5a;
+			box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+		}
+
+		@media (max-width: 640px) {
+			.links-grid {
+				grid-template-columns: 1fr;
+				gap: 0.6rem;
+				padding: 0 0.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- language selector removed from this page -->
+
+	<div class="container">
+		<div class="content-wrapper">
+			<div class="content-card">
+				<h1 class="title">txrmsconditions</h1>
+
+				<nav class="navigation">
+					<a href="index.html">bio</a>
+					<a href="links.html">links</a>
+				</nav>
+
+				<div class="text-content" style="margin-top:0.25rem;">
+					<p style="margin-bottom:0.5rem;">socials and other stuff</p>
+
+					<div class="links-grid" aria-label="links grid">
+						<a class="link-btn" href="https://t.me/txrmsconditions" target="_blank" rel="noopener">telegram (the legal account /j)</a>
+						<a class="link-btn" href="https://tiktok.com/@txrmsconditions" target="_blank" rel="noopener">tiktok</a>
+						<a class="link-btn" href="https://instagram.com/txrmsconditions" target="_blank" rel="noopener">insta</a>
+						<a class="link-btn" href="https://github.com/txrmsconditions" target="_blank" rel="noopener">github (barely use it)</a>
+						<a class="link-btn" href="https://www.youtube.com/channel/UCOX0QhBd591ZP16aZZSpDdQ" target="_blank" rel="noopener">youtube</a>
+						<a class="link-btn" href="https://www.linkedin.com/in/brick-cement-b75399327" target="_blank" rel="noopener">fake linkedin</a>
+						<a class="link-btn" href="https://www.last.fm/user/txrms" target="_blank" rel="noopener">last.fm</a>
+						<a class="link-btn" href="https://mowned.com/ccapy" target="_blank" rel="noopener">mowned (phones)</a>
+                        <a class="link-btn" href="https://xdaforums.com/m/ccapy.12509109/" target="_blank" rel="noopener">xda forums</a>
+                        <a class="link-btn" href="https://discord.com/" target="_blank" rel="noopener">discord: same username  </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<p>2025 txrmsconditions. do whatever you want with this, i couldn't care less</p>
+		<a href="https://github.com/txrmsconditions/txrmsconditions.github.io">source code</a>
+	</footer>
+
+	<script>
+		// changeLanguage kept for compatibility if user navigates here from other pages
+		function changeLanguage() {
+			const select = document.getElementById('languageSelect');
+			if (!select) return;
+			const selectedLang = select.value;
+			if (selectedLang === 'fr') {
+				window.location.href = 'fr.html';
+			} else if (selectedLang === 'ro') {
+				window.location.href = 'ro.html';
+			} else if (selectedLang === 'en') {
+				window.location.href = 'index.html';
+			}
+		}
+	</script>
+</body>
+</html>
