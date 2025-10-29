@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>t x r m s c o n d i t i o n s</title>
-    <meta name="description" content="Personal website of Alex Morgan">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
@@ -22,37 +21,48 @@
 
     <!-- Main Content -->
     <div class="container">
-        <div class="content-card">
-            <!-- Name/Title -->
-            <h1 class="title">txrmsconditions</h1>
-            
-            <!-- Navigation Links -->
-            <nav class="navigation">
-                <a href="#about">About</a>
-                <a href="#work">Work</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        <!-- new split layout: left = photo, right = content -->
+        <div class="split">
+            <div class="left">
+                <img class="photo" src="https://gravatar.com/avatar/309d58f8941846c3b54daa58cb7afe025de6cf44f9e3f80660503351a4860350.jpg?s=1024" alt="my cat pfp of the moment. subject to change. not mine unfirtunately, found it on pinterest i think">
+            </div>
 
-            <!-- Lorem Ipsum Text -->
-            <div class="text-content">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                    commodo consequat.
-                </p>
-                <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+            <div class="right">
+                <div class="content-card">
+                    <!-- Name/Title -->
+                    <h1 class="title">txrmsconditions</h1>
+                    
+                    <!-- Navigation Links -->
+                    <nav class="navigation">
+                        <a href="index.html">bio</a>
+                        <a href="links.html">links</a>
+                    </nav>
+
+                    <!-- mobile-only photo placed right under nav (hidden on desktop) -->
+                    <img class="photo photo--mobile" src="https://gravatar.com/avatar/309d58f8941846c3b54daa58cb7afe025de6cf44f9e3f80660503351a4860350.jpg?s=1024" alt="my cat pfp of the moment. subject to change. not mine unfirtunately, found it on pinterest i think">
+
+                    <!-- bio text -->
+                    <div class="text-content">
+                        <p>
+                            hey! my name's luca and i like tech, more precisely computers, smartphones, electrioncs in general, repairing stuff and networking. i also enjoy electronic music (peep my lastfm), <span title = "fun fact: i once got blacklisted from anydesk one time for having too many clients lol">helping people with their tech-related stuff,</span> and cats! i speak english, french and romanian and i advocate for multimedia piracy and OSS.
+                        </p>
+                        <p>
+                            paradoxically, i absolutely hate coding. like even this crappy website that took me a month to make is almost entirely made with chatgpt and copilot, so don't expect much from it. check out my links!
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+<blockquote style="font-style: italic; color: #555; padding: 12px 10px 28px 10px; margin: 0 0 24px 0; text-align: center; border-left: none;">
+    “why do when you can don't”
+</blockquote>
+
+
     <!-- Footer -->
     <footer class="footer">
-        <p>2025 txrmsconditions. do whatever you want idgaf, it's not made by me either way</p>
+        <p>2025 txrmsconditions. do whatever you want with this, i couldn't care less, it's not made by me either way lol</p>
         <a href="https://github.com/txrmsconditions/txrmsconditions.github.io">source code</a>
     </footer>
 
@@ -65,8 +75,9 @@
                 window.location.href = 'fr.html';
             } else if (selectedLang === 'ro') {
                 window.location.href = 'ro.html';
+            } else if (selectedLang === 'en') {
+                window.location.href = 'index.html';
             }
-            // Stay on current page if English is selected
         }
     </script>
 </body>
