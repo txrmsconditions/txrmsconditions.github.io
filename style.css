@@ -25,7 +25,7 @@ body {
     background-color: hsl(220, 18%, 10%);
     color: hsl(210, 40%, 95%);
     border: 1px solid hsl(220, 15%, 20%);
-    border-radius: 0.75rem;t
+    border-radius: 0.75rem;
     padding: 8px 12px;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
@@ -144,10 +144,10 @@ body {
 
 /* Text Content */
 .text-content {
-    color: hsl(210, 40%, 98%);
+    color: hsl(210, 40%, 98%); /* explicit opaque color */
     line-height: 1.6;
     font-size: 0.875rem;
-    opacity: 0.9;
+    /* removed opacity to ensure text is fully visible */
 }
 
 @media (min-width: 768px) {
