@@ -25,7 +25,7 @@ body {
     background-color: hsl(220, 18%, 10%);
     color: hsl(210, 40%, 95%);
     border: 1px solid hsl(220, 15%, 20%);
-    border-radius: 0.75rem;
+    border-radius: 0.75rem;t
     padding: 8px 12px;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
@@ -111,7 +111,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     font-weight: 700;
-    color: hsl(220, 20%, 8%);
+    color: #ff5a5a;
     margin-bottom: 1.5rem;
     letter-spacing: -0.025em;
 }
