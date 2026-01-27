@@ -9,7 +9,7 @@ const content = {
             paragraph2: 'paradoxically, i absolutely hate coding. like even this crappy website that took me way too long to make is purely ai slop, so don\'t expect much from it. check out my links!'
         },
         fr: {
-            paragraph1: 'coucou ! je m\'appelle luca et j\'aime la tech : PC, smartphones, électronique en général, réparer des trucs et le networking. j\'aime aussi la musique électronique (y\'a mon lastfm stv), aider les gens avec leurs appareils, et les chats ! je parle anglais, français et roumain et je soutiens le piratage multimédia éthique, la confdentialité des données et les projets FOSS.',
+            paragraph1: 'coucou ! je m\'appelle luca et j\'aime la tech : PC, smartphones, électronique en général, réparer des trucs et le networking. j\'aime aussi la musique électronique (y\'a mon lastfm stv), aider les gens avec leurs appareils, et les chats ! je parle anglais, français et roumain et je soutiens le piratage multimédia éthique, la confidentialité des données et les projets FOSS.',
             paragraph2: 'paradoxalement, je déteste absolument coder. même ce site merdique que j\'ai mis des plombes à "faire" est presque entièrement écrit avec chatgpt et copilot, alors t\'attend pas à grand chose (stpstp si tu sais le faire, repare mon css, le spacing est affreux ca me fait mal aux yeux). va voir mes liens !'
         },
         ro: {
@@ -33,7 +33,7 @@ const content = {
     // Footer text by language
     footers: {
         en: {
-            text: 'copyleft 2026 txrmsconditions. do whatever you want with this, i couldn\'t care less, it\'s not made by me either way lol',
+            text: 'copyleft 2025 txrmsconditions. do whatever you want with this, i couldn\'t care less, it\'s not made by me either way lol',
             linkText: 'source code',
             linkUrl: 'https://github.com/txrmsconditions/txrmsconditions.github.io'
         },
@@ -60,10 +60,34 @@ function injectBioText(lang) {
     const bioData = content.bioText[lang] || content.bioText.en;
     const textContent = document.querySelector('.text-content[data-bio]');
     if (textContent) {
-        textContent.innerHTML = `
-            <p>${bioData.paragraph1}</p>
-            <p>${bioData.paragraph2}</p>
-        `;
+        // Create paragraphs safely to avoid XSS
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
+        
+        // For English, handle the span with title attribute
+        if (lang === 'en') {
+            // Split at the span and reconstruct safely
+            const parts = bioData.paragraph1.split('<span title="fun fact: i once got blacklisted from anydesk one time for having too many clients lol">');
+            const beforeSpan = parts[0];
+            const afterSpanParts = parts[1] ? parts[1].split('</span>') : ['', ''];
+            const spanText = afterSpanParts[0];
+            const afterSpan = afterSpanParts[1];
+            
+            p1.appendChild(document.createTextNode(beforeSpan));
+            const span = document.createElement('span');
+            span.title = 'fun fact: i once got blacklisted from anydesk one time for having too many clients lol';
+            span.textContent = spanText;
+            p1.appendChild(span);
+            p1.appendChild(document.createTextNode(afterSpan));
+        } else {
+            p1.textContent = bioData.paragraph1;
+        }
+        
+        p2.textContent = bioData.paragraph2;
+        
+        textContent.innerHTML = ''; // Clear existing content
+        textContent.appendChild(p1);
+        textContent.appendChild(p2);
     }
 }
 
