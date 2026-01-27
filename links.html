@@ -55,7 +55,14 @@
 	</style>
 </head>
 <body>
-	<!-- language selector removed from this page -->
+	<!-- Language Switcher -->
+	<div class="language-switcher">
+		<select id="languageSelect" onchange="changeLanguage()">
+			<option value="en" selected>English</option>
+			<option value="fr">Français</option>
+			<option value="ro">Română</option>
+		</select>
+	</div>
 
 	<div class="container">
 		<div class="content-wrapper">
@@ -63,8 +70,8 @@
 				<h1 class="title">txrmsconditions</h1>
 
 				<nav class="navigation">
-					<a href="index.html">bio</a>
-					<a href="links.html">links</a>
+					<a href="index.html" data-nav="bio">bio</a>
+					<a href="links.html" data-nav="links">links</a>
 				</nav>
 
 				<div class="text-content" style="margin-top:0.25rem;">
@@ -92,17 +99,13 @@
 	</footer>
 
 	<script>
-		// changeLanguage kept for compatibility if user navigates here from other pages
 		function changeLanguage() {
 			const select = document.getElementById('languageSelect');
-			if (!select) return;
 			const selectedLang = select.value;
-			if (selectedLang === 'fr') {
-				window.location.href = 'fr.html';
-			} else if (selectedLang === 'ro') {
-				window.location.href = 'ro.html';
-			} else if (selectedLang === 'en') {
-				window.location.href = 'index.html';
+			
+			// Update content dynamically without page reload
+			if (typeof updateContent === 'function') {
+				updateContent(selectedLang);
 			}
 		}
 	</script>

@@ -1,7 +1,23 @@
 // Centralized content management for easy editing
-// All quotes, footers, and bio text can be edited here in one place
+// All quotes, footers, bio text, and navigation can be edited here in one place
 
 const content = {
+    // Navigation text by language
+    navigation: {
+        en: {
+            bio: 'bio',
+            links: 'links'
+        },
+        fr: {
+            bio: 'bio',
+            links: 'liens'
+        },
+        ro: {
+            bio: 'bio',
+            links: 'linkuri'
+        }
+    },
+    
     // Bio text by language (main paragraph content)
     bioText: {
         en: {
@@ -54,6 +70,19 @@ const content = {
         }
     }
 };
+
+// Current language state
+let currentLanguage = 'en';
+
+// Function to inject navigation text
+function injectNavigation(lang) {
+    const navData = content.navigation[lang] || content.navigation.en;
+    const bioLink = document.querySelector('.navigation a[href*="index.html"], .navigation a[data-nav="bio"]');
+    const linksLink = document.querySelector('.navigation a[href*="links.html"], .navigation a[data-nav="links"]');
+    
+    if (bioLink) bioLink.textContent = navData.bio;
+    if (linksLink) linksLink.textContent = navData.links;
+}
 
 // Function to inject bio text into the page
 function injectBioText(lang) {
@@ -120,10 +149,12 @@ function injectFooter(lang) {
     }
 }
 
-// Initialize content on page load
-document.addEventListener('DOMContentLoaded', function() {
-    const htmlLang = document.documentElement.lang || 'en';
-    const pageLang = htmlLang === 'fr' ? 'fr' : (htmlLang === 'ro' ? 'ro' : 'en');
+// Function to update all content for the selected language
+function updateContent(lang) {
+    currentLanguage = lang;
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
     
     // Check if this is the links page
     const isLinksPage = window.location.pathname.includes('links.html');
@@ -132,8 +163,32 @@ document.addEventListener('DOMContentLoaded', function() {
         injectLinksText();
         injectFooter('links');
     } else {
-        injectBioText(pageLang);
-        injectQuote(pageLang);
-        injectFooter(pageLang);
+        injectBioText(lang);
+        injectQuote(lang);
+        injectFooter(lang);
     }
+    
+    // Always update navigation
+    injectNavigation(lang);
+    
+    // Store language preference
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+// Initialize content on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Check for stored language preference or URL hash
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    const storedLang = localStorage.getItem('preferredLanguage');
+    const initialLang = urlLang || storedLang || 'en';
+    
+    // Set the select value to match
+    const languageSelect = document.getElementById('languageSelect');
+    if (languageSelect) {
+        languageSelect.value = initialLang;
+    }
+    
+    // Load content for the initial language
+    updateContent(initialLang);
 });

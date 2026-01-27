@@ -36,8 +36,8 @@
                     
                     <!-- Navigation Links -->
                     <nav class="navigation">
-                        <a href="index.html">bio</a>
-                        <a href="links.html">links</a>
+                        <a href="index.html" data-nav="bio">bio</a>
+                        <a href="links.html" data-nav="links">links</a>
                     </nav>
 
                     <!-- mobile-only photo placed right under nav (hidden on desktop) -->
@@ -52,8 +52,8 @@
         </div>
     </div>
 
-<blockquote style="font-style: italic; color: #555; padding: 12px 10px 28px 10px; margin: 0 0 24px 0; text-align: center; border-left: none;">
-    “why do when you can don't”
+<blockquote data-quote style="font-style: italic; color: #555; padding: 12px 10px 28px 10px; margin: 0 0 24px 0; text-align: center; border-left: none;">
+    <!-- Quote will be injected by content.js -->
 </blockquote>
 
 
@@ -67,12 +67,9 @@
             const select = document.getElementById('languageSelect');
             const selectedLang = select.value;
             
-            if (selectedLang === 'fr') {
-                window.location.href = 'fr.html';
-            } else if (selectedLang === 'ro') {
-                window.location.href = 'ro.html';
-            } else if (selectedLang === 'en') {
-                window.location.href = 'index.html';
+            // Update content dynamically without page reload
+            if (typeof updateContent === 'function') {
+                updateContent(selectedLang);
             }
         }
     </script>
