@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+	<script src="content.js"></script>
 	<style>
 		.content-wrapper {
 			max-width: 36rem;
@@ -54,7 +55,14 @@
 	</style>
 </head>
 <body>
-	<!-- language selector removed from this page -->
+	<!-- Language Switcher -->
+	<div class="language-switcher">
+		<select id="languageSelect" onchange="changeLanguage()">
+			<option value="en" selected>English</option>
+			<option value="fr">Français</option>
+			<option value="ro">Română</option>
+		</select>
+	</div>
 
 	<div class="container">
 		<div class="content-wrapper">
@@ -62,12 +70,12 @@
 				<h1 class="title">txrmsconditions</h1>
 
 				<nav class="navigation">
-					<a href="index.html">bio</a>
-					<a href="links.html">links</a>
+					<a href="index.html" data-nav="bio">bio</a>
+					<a href="links.html" data-nav="links">links</a>
 				</nav>
 
 				<div class="text-content" style="margin-top:0.25rem;">
-					<p style="margin-bottom:0.5rem;">socials and other stuff</p>
+					<p data-links-heading style="margin-bottom:0.5rem;"><!-- Links heading will be injected by content.js --></p>
 
 					<div class="links-grid" aria-label="links grid">
 						<a class="link-btn" href="https://t.me/txrmsconditions" target="_blank" rel="noopener">telegram (the legal account /j)</a>
@@ -87,22 +95,17 @@
 	</div>
 
 	<footer class="footer">
-		<p>2025 txrmsconditions. do whatever you want with this, i couldn't care less, it's not made by me either way lol</p>
-		<a href="https://github.com/txrmsconditions/txrmsconditions.github.io">source code</a>
+		<!-- Footer content will be injected by content.js -->
 	</footer>
 
 	<script>
-		// changeLanguage kept for compatibility if user navigates here from other pages
 		function changeLanguage() {
 			const select = document.getElementById('languageSelect');
-			if (!select) return;
 			const selectedLang = select.value;
-			if (selectedLang === 'fr') {
-				window.location.href = 'fr.html';
-			} else if (selectedLang === 'ro') {
-				window.location.href = 'ro.html';
-			} else if (selectedLang === 'en') {
-				window.location.href = 'index.html';
+			
+			// Update content dynamically without page reload
+			if (typeof updateContent === 'function') {
+				updateContent(selectedLang);
 			}
 		}
 	</script>
