@@ -22,15 +22,15 @@ const content = {
     bioText: {
         en: {
             paragraph1: 'hey! my name\'s luca and i am a self-proclaimed tech nerd and professional feline enjoyer. i\'m into computers, smartphones, electronics in general, repairing stuff and networking. i also enjoy electronic music (check my lastfm) and <span title="fun fact: i once got blacklisted from anydesk one time for having too many clients lol">helping people with their tech-related stuff</span>. i speak english, french and romanian and i advocate for multimedia piracy, internet privacy and OSS. also i have a burning passion for mandarins',
-            paragraph2: 'paradoxically, i absolutely hate coding. like even this crappy website that took me way too long to make is purely ai slop, so don\'t expect much from it. check out my links!'
+            paragraph2: 'paradoxically, i don\'t code, and don\'t really plan to. like even this crappy website that took me way too long to make is purely ai slop, so don\'t expect much from it. check out my links!'
         },
         fr: {
-            paragraph1: 'coucou ! je m\'appelle luca et j\'aime la tech : PC, smartphones, électronique en général, réparer des trucs et le networking. j\'aime aussi la musique électronique (y\'a mon lastfm stv), aider les gens avec leurs appareils, et les chats ! je parle anglais, français et roumain et je soutiens le piratage multimédia éthique, la confidentialité des données et les projets FOSS.',
-            paragraph2: 'paradoxalement, je déteste absolument coder. même ce site merdique que j\'ai mis des plombes à "faire" est presque entièrement écrit avec chatgpt et copilot, alors t\'attend pas à grand chose (stpstp si tu sais le faire, repare mon css, le spacing est affreux ca me fait mal aux yeux). va voir mes liens !'
+            paragraph1: 'coucou ! je m\'appelle luca et je kiffe la tech : PC, smartphones, électronique en général, réparer des trucs et le networking. j\'aime aussi la musique électronique (y\'a mon lastfm stv), aider les gens avec leurs appareils, et les chats ! je parle anglais, français et roumain et je soutiens le piratage multimédia éthique, la confidentialité des données et les projets FOSS. de plus, j\'ai une passion ardente pour les clémentines',
+            paragraph2: 'paradoxalement, je code pas, et ça me donne pas trop envie. même ce site merdique c\'est que du code ia de merde, alors t\'attend pas à grand chose. va voir mes liens !'
         },
         ro: {
-            paragraph1: 'salut! mă numesc luca, sunt amator de pisici profesional, și îmi place tehnologia: calculatoare, smartphone-uri, electronice în general, reparat chestii și networking. îmi place și muzica electronică (vezi pe lastfm) si să ajut oamenii cu probleme tech. vorbesc engleză, franceză și română, si susțin piratarea multimedia, confidentialitatea si proiectele FOSS.',
-            paragraph2: 'paradoxal, urăsc programarea. chiar și acest site prost făcut care a durat mult prea mult sa-l fac e aproape complet făcut cu chatgpt și copilot, deci nu te astepta la mare chestie. vezi linkurile mele!'
+            paragraph1: 'salut! mă numesc luca, sunt amator de pisici profesional, și îmi place tehnologia: calculatoare, smartphone-uri, electronice în general, reparat chestii și networking. îmi place și muzica electronică (vezi pe lastfm) si să ajut oamenii cu probleme tech. vorbesc engleză, franceză și română, si susțin piratarea multimedia, confidentialitatea si proiectele FOSS. iubesc mandarinele.',
+            paragraph2: 'paradoxal, nu codez. nici nu prea am chef sa invat. chiar și acest site prost făcut e doar ai, deci nu te astepta la mare chestie. vezi linkurile mele!'
         }
     },
     
@@ -49,22 +49,22 @@ const content = {
     // Footer text by language
     footers: {
         en: {
-            text: 'copyleft 2025 txrmsconditions. do whatever you want with this, i couldn\'t care less, it\'s not made by me either way lol',
+            text: 'copyleft 2026 txrmsconditions. do whatever you want with this, i couldn\'t care less, it\'s not made by me either way lol',
             linkText: 'source code',
             linkUrl: 'https://github.com/txrmsconditions/txrmsconditions.github.io'
         },
         fr: {
-            text: '2025 txrmsconditions. y\'a pas de license, tfaçon c pas moi qui l\'a fait mdr.',
+            text: 'copyleft 2026 txrmsconditions. y\'a pas de license, tfaçon c pas moi qui l\'a fait mdr.',
             linkText: 'code source',
             linkUrl: 'https://github.com/txrmsconditions/txrmsconditions.github.io'
         },
         ro: {
-            text: '2025 txrmsconditions. niciun license ca oricum nu eu l-am facut.',
+            text: 'copyleft 2026 txrmsconditions. niciun license ca oricum nu eu l-am facut.',
             linkText: 'cod sursă',
             linkUrl: 'https://github.com/txrmsconditions/txrmsconditions.github.io'
         },
         links: {
-            text: '2025 txrmsconditions. do whatever you want with this, i couldn\'t care less, it\'s not made by me either way lol',
+            text: 'copyleft 2026 txrmsconditions. do whatever you want with this, i couldn\'t care less, it\'s not made by me either way lol',
             linkText: 'source code',
             linkUrl: 'https://github.com/txrmsconditions/txrmsconditions.github.io'
         }
