@@ -18,16 +18,16 @@ const content = {
     // Bio text by language (main paragraph content)
     bioText: {
         en: {
-            paragraph1: 'hey! my name\'s luca and i am a self-proclaimed tech nerd and professional feline enjoyer. i\'m into computers, smartphones, electronics in general, repairing stuff and networking. i also enjoy electronic music (check my lastfm) and helping people with their tech-related stuff. i speak english, french and romanian and i advocate for ethical multimedia piracy, internet privacy and OSS. i also have a burning passion for mandarins',
-            paragraph2: 'paradoxically, i don\'t code, and don\'t really plan to. like even this crappy website that took me way too long to make is purely ai slop, so don\'t expect much from it. check out my links!'
+            paragraph1: 'hey! my name\'s luca and i am a self-proclaimed tech nerd and professional feline enjoyer. i\'m into computers, smartphones, electronics in general, repairing stuff and networking. i also enjoy electronic music (check my lastfm) and helping people with their tech-related stuff. i speak english, french and romanian and i advocate for ethical multimedia piracy, internet privacy and OSS. i also have a burning passion for mandarins.',
+            paragraph2: 'paradoxically, i don\'t code. like even this crappy website that took way too long to make and tweak is entirely ai, so don\'t expect much from it. check out my links!'
         },
         fr: {
-            paragraph1: 'coucou ! je m\'appelle luca et je kiffe la tech : PC, smartphones, électronique en général, réparer des trucs et le networking. j\'aime aussi la musique électronique, aider les gens avec leurs appareils, et les chats ! je parle anglais, français et roumain et je soutiens le piratage multimédia éthique, la confidentialité sur internet et les projets FOSS. de plus, j\'ai une passion ardente pour les clémentines',
-            paragraph2: 'paradoxalement, je code pas, et ça me donne pas trop envie. même ce site merdique c\'est que du code ia de merde, alors t\'attend pas à grand chose. va voir mes liens !'
+            paragraph1: 'coucou ! je m\'appelle luca et j\'adore la tech : PC, smartphones, électronique en général, réparer des trucs et le networking. j\'aime aussi la musique électronique, aider les gens avec leurs appareils, et les chats ! je parle anglais, français et roumain et je soutiens le piratage multimédia éthique, la confidentialité sur internet et les projets FOSS. par ailleurs, j\'ai une passion ardente pour les clémentines.',
+            paragraph2: 'paradoxalement, je code pas, et ça me donne pas trop envie en vrai. même ce site merdique c\'est que du code ia, donc t\'attend pas à grand chose. va voir mes liens !'
         },
         ro: {
-            paragraph1: 'salut! mă numesc luca, sunt amator de pisici profesional, și îmi place tehnologia: calculatoare, smartphone-uri, electronice în general, reparat chestii, networking, și muzica electronică (vezi pe lastfm). vorbesc engleză, franceză și română, si susțin piratarea multimedia etica, confidentialitatea pe internet si proiectele FOSS. iubesc mandarinele.',
-            paragraph2: 'paradoxal, nu codez. nici nu prea am chef sa invat. chiar și acest site prost făcut e doar ai, deci nu te astepta la mare chestie. vezi linkurile mele!'
+            paragraph1: 'salut! eu sunt luca, sunt amator de pisici profesional, și îmi place tehnologia: PC-uri, laptopuri smartphone-uri, electronice în general, reparat chestii, networking, și muzica electronică. vorbesc engleză, franceză și română, si susțin piratarea multimedia etica, confidentialitatea pe internet si proiectele FOSS. iubesc mandarinele.',
+            paragraph2: 'paradoxal, nu codez. nici nu prea am chef sa invat. chiar și site-ul asta prost făcut e doar ai, deci nu te astepta la mare chestie. vezi linkurile mele!'
         }
     },
     
