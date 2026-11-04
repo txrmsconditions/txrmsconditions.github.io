@@ -16,110 +16,182 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-K4D44T7H');</script>
 
+  <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>t x r m s c o n d i t i o n s</title>
+  <title>txrmsconditions</title>
+  <meta name="description" content="hey, i'm luca. into computers, phones, repairing stuff, networking, privacy and open source.">
+  <meta name="theme-color" content="#fbf6ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://txrmsconditions.com/">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="txrmsconditions">
+  <meta property="og:description" content="hey, i'm luca. tech nerd, cat person, mandarin enjoyer.">
+  <meta property="og:url" content="https://txrmsconditions.com/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <script src="content.js"></script>
+  <script src="content.js" defer></script>
 </head>
-<body class="page-index">
+<body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4D44T7H"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- Globe language switcher -->
-  <div class="lang-switcher">
-    <button class="lang-trigger" id="langTrigger" onclick="toggleLangMenu()" aria-label="Select language">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <line x1="2" y1="12" x2="22" y2="12"/>
-        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-      </svg>
-    </button>
-    <div class="lang-menu" id="langMenu">
-      <button class="lang-btn" onclick="switchLang('en'); closeLangMenu()" data-lang="en">English</button>
-      <button class="lang-btn" onclick="switchLang('fr'); closeLangMenu()" data-lang="fr">Français</button>
-      <button class="lang-btn" onclick="switchLang('ro'); closeLangMenu()" data-lang="ro">Română</button>
+  <a class="skip-link" href="#main" data-i18n="skip">skip to content</a>
+
+  <!-- ── header ─────────────────────────────────────────────────────────── -->
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="txrmsconditions, back to top">
+        txrmsconditions<span class="brand-cursor">_</span>
+      </a>
+
+      <nav class="nav" aria-label="sections">
+        <a href="#about"    data-i18n="nav.about">about</a>
+        <a href="#stuff"    data-i18n="nav.stuff">stuff</a>
+        <a href="#projects" data-i18n="nav.projects">projects</a>
+        <a href="#links"    data-i18n="nav.links">links</a>
+      </nav>
+
+      <div class="lang" role="group" aria-label="language">
+        <button type="button" data-lang="en" lang="en" aria-label="English">en</button>
+        <button type="button" data-lang="fr" lang="fr" aria-label="Français">fr</button>
+        <button type="button" data-lang="ro" lang="ro" aria-label="Română">ro</button>
+      </div>
     </div>
-  </div>
+  </header>
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="split">
+  <main id="main">
 
-      <!-- Left: photo -->
-      <div class="left">
-        <div class="photo-wrap">
-          <img class="photo"
+    <!-- ── hero ─────────────────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="blob blob-a" aria-hidden="true"></div>
+      <div class="blob blob-b" aria-hidden="true"></div>
+
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow reveal" data-i18n="hero.eyebrow">tech nerd · cat person · mandarin enjoyer</p>
+          <h1 class="hero-title reveal"><span data-i18n="hero.title">hey, i'm luca</span> <span class="wave" aria-hidden="true">👋</span></h1>
+          <p class="lead reveal" data-i18n="hero.lead">i like computers, phones and pretty much anything with a circuit board in it.</p>
+          <div class="actions reveal">
+            <a class="btn btn-primary" href="#links"    data-i18n="hero.cta">say hi</a>
+            <a class="btn btn-ghost"   href="#projects" data-i18n="hero.cta2">what i made</a>
+          </div>
+        </div>
+
+        <div class="hero-photo reveal">
+          <img class="avatar"
                src="https://gravatar.com/avatar/48d99d96682b1a2041b7f447b5e597d3592c637d65577ada2e21e716f272449f.jpg?size=512"
-               alt="cat pfp of the moment. subject to change. not mine unfortunately, usually i get these off of pinterest">
+               alt="my current pfp. it's a cat, not mine sadly" width="260" height="260">
+          <button class="sticker" type="button" aria-label="a mandarin. click it.">🍊</button>
         </div>
       </div>
+    </section>
 
-      <!-- Right: window card -->
-      <div class="right">
-        <div class="window-card">
-          <div class="window-bar">
-            <div class="window-dots">
-              <span class="dot dot-r"></span>
-              <span class="dot dot-y"></span>
-              <span class="dot dot-g"></span>
-            </div>
-          </div>
-          <div class="window-body">
-            <h1 class="title">txrmsconditions<span class="cursor">_</span></h1>
-            <nav class="navigation">
-              <a href="index.html" data-nav="bio">bio</a>
-              <a href="links.html" data-nav="links">links</a>
-            </nav>
-            <!-- mobile-only photo -->
-            <img class="photo photo--mobile"
-                 src="https://gravatar.com/avatar/309d58f8941846c3b54daa58cb7afe025de6cf44f9e3f80660503351a4860350.jpg?s=512"
-                 alt="my cat pfp of the moment. subject to change. not mine unfortunately, found it on pinterest i think">
-            <!-- bio injected by content.js -->
-            <div class="text-content" data-bio></div>
-          </div>
+    <!-- ── about ────────────────────────────────────────────────────────── -->
+    <section class="section wrap" id="about">
+      <h2 class="section-title reveal" data-i18n="about.heading">about me</h2>
+      <div class="about-grid">
+        <div class="prose reveal">
+          <p data-i18n="about.p1"></p>
+          <p data-i18n="about.p2"></p>
+          <p class="aside" data-i18n="about.p3"></p>
         </div>
-      </div>
 
+        <ul class="now">
+          <li class="now-card reveal" style="--tint: var(--c-pink)">
+            <span class="now-emoji" aria-hidden="true">🎧</span>
+            <span class="now-label" data-i18n="now.listenLabel">listening to</span>
+            <a class="now-value" href="https://www.last.fm/user/txrms" target="_blank" rel="noopener"><span data-i18n="now.listen">electronic music, mostly</span> <span class="arrow" aria-hidden="true">↗</span></a>
+          </li>
+          <li class="now-card reveal" style="--tint: var(--c-green)">
+            <span class="now-emoji" aria-hidden="true">💬</span>
+            <span class="now-label" data-i18n="now.speakLabel">speaking</span>
+            <span class="now-value">english, français, română</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── stuff ────────────────────────────────────────────────────────── -->
+    <section class="section wrap" id="stuff">
+      <h2 class="section-title reveal" data-i18n="stuff.heading">stuff i'm into</h2>
+      <ul class="chips reveal">
+        <li style="--tint: var(--c-blue)"><span aria-hidden="true">💻</span> <span data-i18n="stuff.computers">computers</span></li>
+        <li style="--tint: var(--c-purple)"><span aria-hidden="true">📱</span> <span data-i18n="stuff.phones">smartphones</span></li>
+        <li style="--tint: var(--c-orange)"><span aria-hidden="true">🔧</span> <span data-i18n="stuff.repair">repairing stuff</span></li>
+        <li style="--tint: var(--c-green)"><span aria-hidden="true">🌐</span> <span data-i18n="stuff.networking">networking</span></li>
+        <li style="--tint: var(--c-green)"><span aria-hidden="true">🤖</span> <span data-i18n="stuff.android">android &amp; custom roms</span></li>
+        <li style="--tint: var(--c-blue)"><span aria-hidden="true">🔒</span> <span data-i18n="stuff.privacy">privacy</span></li>
+        <li style="--tint: var(--c-yellow)"><span aria-hidden="true">🐧</span> <span data-i18n="stuff.oss">open source</span></li>
+        <li style="--tint: var(--c-purple)"><span aria-hidden="true">🧠</span> <span data-i18n="stuff.ai">ai</span></li>
+        <li style="--tint: var(--c-pink)"><span aria-hidden="true">✨</span> <span data-i18n="stuff.vibecoding">vibecoding</span></li>
+        <li style="--tint: var(--c-green)"><span aria-hidden="true">🤝</span> <span data-i18n="stuff.sales">sales</span></li>
+        <li style="--tint: var(--c-pink)"><span aria-hidden="true">🎧</span> <span data-i18n="stuff.music">electronic music</span></li>
+        <li style="--tint: var(--c-purple)"><span aria-hidden="true">🐈</span> <span data-i18n="stuff.cats">cats</span></li>
+        <li style="--tint: var(--c-orange)"><span aria-hidden="true">🍊</span> <span data-i18n="stuff.mandarins">mandarins</span></li>
+      </ul>
+    </section>
+
+    <!-- ── projects ─────────────────────────────────────────────────────── -->
+    <section class="section wrap" id="projects">
+      <h2 class="section-title reveal" data-i18n="projects.heading">things i made</h2>
+      <div class="projects">
+        <a class="project project-featured reveal" href="https://cemultix.games" target="_blank" rel="noopener">
+          <span class="project-tag" data-i18n="projects.p1.tag">my first project</span>
+          <h3>Cémultix</h3>
+          <p data-i18n="projects.p1.body"></p>
+          <span class="project-link"><span data-i18n="projects.p1.link">play it</span> <span class="arrow" aria-hidden="true">↗</span></span>
+        </a>
+        <a class="project reveal" href="https://github.com/txrmsconditions/txrmsconditions.github.io" target="_blank" rel="noopener">
+          <span class="project-tag" data-i18n="projects.p2.tag">website</span>
+          <h3 data-i18n="projects.p2.title">this website</h3>
+          <p data-i18n="projects.p2.body"></p>
+          <span class="project-link"><span data-i18n="projects.p2.link">see the code</span> <span class="arrow" aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── links ────────────────────────────────────────────────────────── -->
+    <section class="section wrap" id="links">
+      <h2 class="section-title reveal" data-i18n="links.heading">find me</h2>
+      <p class="links-lead reveal" data-i18n="links.lead">easiest way to reach me is telegram or discord.</p>
+
+      <ul class="tiles">
+        <li class="reveal"><a class="tile" style="--brand:#229ed9" href="https://t.me/txrmsconditions" target="_blank" rel="noopener">
+          <span class="tile-name">telegram</span><span class="tile-sub" data-i18n="links.telegram">message me</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li class="reveal"><a class="tile" style="--brand:#5865f2" href="https://discord.com/users/1527088920070979686" target="_blank" rel="noopener">
+          <span class="tile-name">discord</span><span class="tile-sub" data-i18n="links.discord">add me</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li class="reveal"><a class="tile" style="--brand:#6e7681" href="https://github.com/txrmsconditions" target="_blank" rel="noopener">
+          <span class="tile-name">github</span><span class="tile-sub" data-i18n="links.github">my repos</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li class="reveal"><a class="tile" style="--brand:#e62117" href="https://www.youtube.com/channel/UCOX0QhBd591ZP16aZZSpDdQ" target="_blank" rel="noopener">
+          <span class="tile-name">youtube</span><span class="tile-sub" data-i18n="links.youtube">videos</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li class="reveal"><a class="tile" style="--brand:#c3000d" href="https://www.last.fm/user/txrms" target="_blank" rel="noopener">
+          <span class="tile-name">last.fm</span><span class="tile-sub" data-i18n="links.lastfm">what i listen to</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li class="reveal"><a class="tile" style="--brand:#e8890c" href="https://xdaforums.com/m/ccapy.12509109/" target="_blank" rel="noopener">
+          <span class="tile-name">xda forums</span><span class="tile-sub" data-i18n="links.xda">phone stuff</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+        <li class="reveal"><a class="tile" style="--brand:#7c4dff" href="https://mowned.com/ccapy" target="_blank" rel="noopener">
+          <span class="tile-name">mowned</span><span class="tile-sub" data-i18n="links.mowned">profile</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ── footer ───────────────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="footer-quote" data-i18n="footer.quote">"why do when you can don't"</p>
+      <div class="footer-meta">
+        <span>copyleft <span data-year>2026</span> txrmsconditions</span>
+        <a href="https://github.com/txrmsconditions/txrmsconditions.github.io" target="_blank" rel="noopener" data-i18n="footer.source">source code</a>
+      </div>
     </div>
-  </div>
-
-  <!-- Quote bar -->
-  <div class="quote-bar">
-    <span class="quote-prompt">&gt;&gt;</span>
-    <blockquote data-quote></blockquote>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer"></footer>
-
-  <script>
-    function toggleLangMenu() {
-      const menu    = document.getElementById('langMenu');
-      const trigger = document.getElementById('langTrigger');
-      const open    = menu.classList.toggle('open');
-      trigger.classList.toggle('open', open);
-    }
-    function closeLangMenu() {
-      document.getElementById('langMenu').classList.remove('open');
-      document.getElementById('langTrigger').classList.remove('open');
-    }
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.lang-switcher')) closeLangMenu();
-    });
-  </script>
-
-  <script type="module">
-    import { trailingCursor } from "https://unpkg.com/cursor-effects@latest/dist/browser.js";
-    new trailingCursor();
-  </script>
+  </footer>
 </body>
 </html>
